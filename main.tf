@@ -7,6 +7,6 @@ resource "aws_instance" "main" {
     tags = merge(
         var.common_tags,
         {
-            Name = "${local.project_name}-${var.instances[count.index]}"
+            Name = "${local.resource_name}-${var.instances[count.index]}"
         })
     }
